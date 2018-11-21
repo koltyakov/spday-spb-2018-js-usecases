@@ -1,0 +1,17 @@
+.loginDialog {
+  position: absolute;
+  z-index: 10000;
+  background-color: #fefefe;
+  width: 100%;
+  height: 100%;
+  display: table;
+}
+
+.tableRow {
+  display: table-row;
+  .tableCell {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+  }
+}

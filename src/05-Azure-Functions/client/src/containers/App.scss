@@ -1,0 +1,21 @@
+.app {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  .table {
+    display: table;
+    width: 100%;
+    height: 100%;
+    .row {
+      display: table-row;
+      height: 50%;
+      .cell {
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+      }
+    }
+  }
+}

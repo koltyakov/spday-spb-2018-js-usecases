@@ -1,0 +1,9 @@
+{
+  "IsEncrypted": false,
+  "Values": {
+    "AzureWebJobsStorage": "",
+    "SPO_SITE_URL": "",
+    "SPO_APP_CLIENT_ID": "",
+    "SPO_APP_SECRET": ""
+  }
+}

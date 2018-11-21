@@ -1,0 +1,31 @@
+export enum REQUEST_TYPE {
+  LOGIN = 'LOGIN',
+  RENEW_TOKEN = 'RENEW_TOKEN',
+  UNKNOWN = 'UNKNOWN'
+}
+
+export enum RESPONSE_TYPE {
+  ID_TOKEN_TOKEN = 'id_token token',
+  TOKEN = 'token'
+}
+
+export enum LOGGING_LEVEL {
+  ERROR = 0,
+  WARN = 1,
+  INFO = 2,
+  VERBOSE = 3
+}
+
+export enum TOKEN_STATUS {
+  TOKEN_RENEW_STATUS_CANCELED = 'Canceled',
+  TOKEN_RENEW_STATUS_COMPLETED = 'Completed',
+  TOKEN_RENEW_STATUS_IN_PROGRESS = 'In Progress',
+}
+
+export const CONSTANTS = {
+  RESOURCE_DELIMETER: '|',
+  CACHE_DELIMETER: '||',
+  LOADFRAME_TIMEOUT: 6000,
+  POPUP_WIDTH: 483,
+  POPUP_HEIGHT: 600
+};

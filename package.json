@@ -1,0 +1,40 @@
+{
+  "name": "spday-2018-js-api-examples",
+  "version": "1.0.0",
+  "description": "SharePoint Day 2018 - SharePoint JS API Consumption Examples",
+  "main": "index.js",
+  "scripts": {
+    "connect": "node ./scripts/connect",
+    "pnp:deploy": "powershell ./scripts/deploy.ps1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/koltyakov/spday-2018-js-api-examples.git"
+  },
+  "keywords": [
+    "SharePoint",
+    "SPDay2018",
+    "API",
+    "TypeScript",
+    "REST"
+  ],
+  "author": "Andrew Koltyakov <andrew.koltyakov@gmail.com>",
+  "license": "MIT",
+  "homepage": "https://gitlab.com/koltyakov/spday-2018-js-api-examples#readme",
+  "devDependencies": {
+    "@types/node": "^10.12.5",
+    "tslint": "^5.11.0",
+    "tslint-config-standard": "^8.0.1",
+    "typescript": "^3.1.6"
+  },
+  "dependencies": {
+    "@pnp/pnpjs": "^1.2.5",
+    "@pnp/sp-clientsvc": "^1.2.5",
+    "@pnp/sp-taxonomy": "^1.2.5",
+    "date-fns": "^1.29.0",
+    "node-sp-auth": "^2.5.6",
+    "node-sp-auth-config": "^2.5.6",
+    "pnp-auth": "0.0.4",
+    "ts-node": "^7.0.1"
+  }
+}

@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<pnp:Provisioning xmlns:pnp="http://schemas.dev.office.com/PnP/2018/05/ProvisioningSchema"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://schemas.dev.office.com/PnP/2018/05/ProvisioningSchema https://raw.githubusercontent.com/OfficeDev/PnP-Provisioning-Schema/master/OfficeDevPnP.ProvisioningSchema/ProvisioningSchema-2018-05.xsd">
+  <pnp:Preferences Generator="Manual" />
+  <pnp:Templates ID="SPDAY-TEMPLATE">
+    <pnp:ProvisioningTemplate ID="SPDayVotes" Version="1">
+      <pnp:SiteFields>
+        <Field ID="{31d87655-298e-43e1-8819-c9086afb88c9}" Name="SPDayVote" DisplayName="Vote Value" Group="SPDay" Decimals="0" Type="Number" />
+        <Field ID="{cee241d1-9391-4274-8789-da83129f7373}" Name="SPDayVoteIdentity" DisplayName="Vote ID" Group="SPDay" Type="Text" Indexed="TRUE" AllowDuplicateValues="TRUE" />
+        <Field ID="{f5549ebf-0e64-4930-bf70-496ea55a8e70}" Name="SPDayVoteMeta" DisplayName="Vote Meta" Group="SPDay" Type="Note" NumLines="6" RichText="FALSE" RichTextMode="Compatible" />
+      </pnp:SiteFields>
+      <pnp:ContentTypes>
+        <pnp:ContentType ID="0x0100E8D46DEFF25549E9B3B57B7C807C2ADE" Name="SPDay Vote" Group="SPDay">
+          <pnp:FieldRefs>
+            <pnp:FieldRef ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Name="Title" Required="false" />
+            <pnp:FieldRef ID="{31d87655-298e-43e1-8819-c9086afb88c9}" Name="SPDayVote" Required="true" />
+            <pnp:FieldRef ID="{cee241d1-9391-4274-8789-da83129f7373}" Name="SPDayVoteIdentity" Required="true" />
+            <pnp:FieldRef ID="{f5549ebf-0e64-4930-bf70-496ea55a8e70}" Name="SPDayVoteMeta" Required="false" />
+          </pnp:FieldRefs>
+        </pnp:ContentType>
+      </pnp:ContentTypes>
+      <pnp:Lists>
+        <pnp:ListInstance Title="Votes" TemplateType="100" Url="Lists/Votes" ContentTypesEnabled="true" RemoveExistingContentTypes="true">
+          <pnp:ContentTypeBindings>
+            <pnp:ContentTypeBinding ContentTypeID="0x0100E8D46DEFF25549E9B3B57B7C807C2ADE" Default="true" />
+          </pnp:ContentTypeBindings>
+          <pnp:Views RemoveExistingViews="true">
+            <View Name="{94871e2e-55bb-48d9-a03a-9fbb09391d75}" DefaultView="TRUE" MobileView="TRUE" Type="HTML" DisplayName="All votes" Url="{site}/Lists/Votes/AllItems.aspx" Level="1" BaseViewID="1" ContentTypeID="0x" ImageUrl="/_layouts/15/images/generic.png?rev=39">
+              <Query>
+                <OrderBy>
+                  <FieldRef Name="Created" Ascending="FALSE" />
+                </OrderBy>
+              </Query>
+              <ViewFields>
+                <pnp:FieldRef Name="Created" />
+                <pnp:FieldRef Name="SPDayVote" />
+                <pnp:FieldRef Name="SPDayVoteIdentity" />
+              </ViewFields>
+              <RowLimit Paged="TRUE">30</RowLimit>
+            </View>
+          </pnp:Views>
+          <pnp:FieldRefs>
+            <pnp:FieldRef ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" Name="Title" Required="false" />
+            <pnp:FieldRef ID="{31d87655-298e-43e1-8819-c9086afb88c9}" Name="SPDayVote" Required="true" />
+            <pnp:FieldRef ID="{cee241d1-9391-4274-8789-da83129f7373}" Name="SPDayVoteIdentity" Required="true" />
+            <pnp:FieldRef ID="{f5549ebf-0e64-4930-bf70-496ea55a8e70}" Name="SPDayVoteMeta" Required="false" />
+          </pnp:FieldRefs>
+        </pnp:ListInstance>
+      </pnp:Lists>
+    </pnp:ProvisioningTemplate>
+  </pnp:Templates>
+</pnp:Provisioning>

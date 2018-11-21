@@ -1,0 +1,13 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "spday-2018-js-api-spfx-client-side-solution",
+    "id": "2d36724f-5652-454f-abaa-000f354e8759",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "isDomainIsolated": false
+  },
+  "paths": {
+    "zippedPackage": "solution/spday-2018-js-api-spfx.sppkg"
+  }
+}

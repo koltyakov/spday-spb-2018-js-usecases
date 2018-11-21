@@ -1,0 +1,33 @@
+{
+  "name": "spday-2018-sample-functions",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run clean && npm run tsc && npm run prepack && npm run pack",
+    "pack": "funcpack pack ./build --editConfig ../webpack.config.js",
+    "publish": "cd ./build && func azure functionapp publish Workfront && cd ..",
+    "prepack": "copyfiles ./src/**/*.json ./src/**/*.js ./build --up 1",
+    "host": "cd ./build && func host start",
+    "start": "npm run build && concurrently \"npm run tsc -- -w\" \"npm run host\"",
+    "tsc": "tsc -p .",
+    "clean": "rimraf ./build ./dist"
+  },
+  "keywords": [],
+  "dependencies": {
+    "@pnp/nodejs": "^1.2.5",
+    "@pnp/pnpjs": "^1.2.5"
+  },
+  "devDependencies": {
+    "azure-functions-pack": "^1.0.0",
+    "commander": "^2.19.0",
+    "concurrently": "^4.0.1",
+    "copyfiles": "^2.1.0",
+    "mkdirp": "^0.5.1",
+    "rimraf": "^2.6.2",
+    "tslint-config-standard": "^8.0.1",
+    "typescript": "^3.1.6"
+  },
+  "author": "",
+  "license": "MIT"
+}
